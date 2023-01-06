@@ -1,1 +1,1 @@
-console.log("test");
+console.log("test"),document.querySelector(".mainBody").textContent="test";
