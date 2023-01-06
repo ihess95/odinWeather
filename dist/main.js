@@ -1,1 +1,1 @@
-console.log("test"),document.querySelector(".mainBody").textContent="test";
+(()=>{"use strict";const t="";console.log("test"),document.querySelector(".mainBody").textContent="test",async function(){const o=await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`,{mode:"cors"});console.log(o),o.json().then((function(o){t=o}))}()})();
