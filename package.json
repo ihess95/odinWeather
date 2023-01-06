@@ -2,9 +2,10 @@
   "name": "odinweather",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/ihess95/odinWeather#readme",
   "devDependencies": {
-    "webpack": "^5.75.0"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   }
 }
