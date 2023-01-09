@@ -6,3 +6,5 @@ async function geoCoder() {
   const lat = response.lat;
   const lon = response.lon;
 }
+
+export { geoCoder };
