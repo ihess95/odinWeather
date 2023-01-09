@@ -1,6 +1,5 @@
-let weatherData = "";
-const lat = 90.92;
-const lon = 90.9;
+const lat = "43.0718";
+const lon = "70.7626";
 const apiKey = "5ac36be232f53df626408888c0e28c2e";
 async function getWeather() {
   const response = await fetch(
@@ -8,8 +7,8 @@ async function getWeather() {
     { mode: "cors" }
   );
   console.log(response);
-  response.json().then(function (response) {
-    weatherData = response;
-  });
+  const weatherData = await response.json();
+  console.log(`weatherData: ${weatherData}`);
+  return weatherData;
 }
 export { getWeather };
