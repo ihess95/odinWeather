@@ -6,3 +6,4 @@ const mainBody = document.querySelector(".mainBody");
 mainBody.textContent = "test";
 
 getWeather();
+geoCoder();
