@@ -8,4 +8,4 @@ const mainBody = document.querySelector(".mainBody");
 mainBody.textContent = "test";
 
 getWeather(apiKey);
-geoCoder(London, apiKey);
+geoCoder("London", apiKey);
