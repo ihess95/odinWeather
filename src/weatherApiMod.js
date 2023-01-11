@@ -7,7 +7,7 @@ async function getWeather(apiKey) {
   );
   console.log(response);
   const weatherData = await response.json();
-  console.log(`weatherData: ${weatherData}`);
+  console.log(`weatherData: ${JSON.stringify(weatherData)}`);
   return weatherData;
 }
 export { getWeather };

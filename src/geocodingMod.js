@@ -3,7 +3,7 @@ async function geoCoder(location, apiKey) {
     `http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=5&appid=${apiKey}`,
     { mode: "cors" }
   );
-  console.log(response);
+  console.log(JSON.stringify(response));
   const lat = response.lat;
   const lon = response.lon;
 }
