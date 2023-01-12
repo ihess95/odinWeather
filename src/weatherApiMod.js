@@ -1,8 +1,8 @@
 const lat = "43.0718";
 const lon = "70.7626";
-async function getWeather(apiKey) {
+async function getWeather(location, apiKey) {
   const response = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}`,
+    `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`,
     { mode: "cors" }
   );
   console.log(response);
