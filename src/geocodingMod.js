@@ -5,11 +5,11 @@ async function geoCoder(location, apiKey) {
   );
   console.log(response);
   const locationData = response.lat;
-  console.log("data" + JSON.stringify(locationData));
+  console.log("data: " + JSON.stringify(locationData));
   const lat = locationData.lat;
-  console.log("lat" + lat);
+  console.log("lat: " + lat);
   const lon = locationData.lon;
-  console.log("lon" + lon);
+  console.log("lon: " + lon);
 }
 
 export { geoCoder };
