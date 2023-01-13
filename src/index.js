@@ -7,3 +7,4 @@ const mainBody = document.querySelector(".mainBody");
 mainBody.textContent = "test";
 
 getWeather("London", apiKey);
+const weatherData = getWeather.weatherData;
