@@ -7,4 +7,7 @@ const mainBody = document.querySelector(".mainBody");
 mainBody.textContent = "test";
 
 getWeather("London", apiKey);
-const weatherData = getWeather.weatherData;
+const coordinates = document.createElement("div");
+coordinates.textContent = weatherData.coord;
+mainBody.appendChild(coordinates);
+weatherData.coord;
