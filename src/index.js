@@ -8,6 +8,5 @@ mainBody.textContent = "test";
 
 getWeather("London", apiKey);
 const coordinates = document.createElement("div");
-coordinates.textContent = weatherData.coord;
+coordinates.textContent = weatherData;
 mainBody.appendChild(coordinates);
-weatherData.coord;
