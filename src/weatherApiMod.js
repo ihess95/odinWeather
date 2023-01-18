@@ -6,7 +6,9 @@ async function getWeather(location, apiKey) {
   console.log(response);
   const weatherData = await response.json();
   console.log(`weatherData: ${weatherData.weather[0].main}`);
-  console.log(`otherData: ${weatherData.main.temp}`);
+  console.log(`Temp: ${weatherData.main.temp}`);
+  console.log(`Humidity: ${weatherData.main.humidity}`);
+  console.log(`Wind: ${weatherData.wind.speed} MPH`);
   return weatherData;
 }
 export { getWeather };
