@@ -5,6 +5,7 @@ async function getWeather(location, unit, apiKey) {
   );
   console.log(response);
   const weatherData = await response.json();
+  console.log(weatherData.name);
   console.log(`weatherData: ${weatherData.weather[0].main}`);
   console.log(`Temp: ${weatherData.main.temp}`);
   console.log(`Feels Like: ${weatherData.main.feels_like}`);
