@@ -4,7 +4,7 @@ async function getWeather(location, unit, apiKey) {
     { mode: "cors" }
   );
   console.log(response);
-  const weatherData = await response.json();
+  weatherData = await response.json();
   console.log(weatherData.name);
   console.log(`weatherData: ${weatherData.weather[0].main}`);
   console.log(`Temp: ${weatherData.main.temp}`);
