@@ -2,7 +2,7 @@
 // import { weatherData } from "./weatherApiMod";
 
 const apiKey = "5ac36be232f53df626408888c0e28c2e";
-const weatherData = "";
+let weatherData = "";
 
 async function getWeather(location, unit, apiKey) {
   try {
