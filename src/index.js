@@ -1,5 +1,4 @@
 // import { getWeather } from "./weatherApiMod";
-// import { weatherData } from "./weatherApiMod";
 
 const apiKey = "5ac36be232f53df626408888c0e28c2e";
 let weatherData = "";
@@ -24,8 +23,3 @@ async function getWeather(location, unit, apiKey) {
 }
 
 getWeather("London", "Imperial", apiKey);
-
-// const coordinates = document.createElement("div");
-// coordinates.textContent = weatherData;
-// mainBody.appendChild(coordinates);
-console.log("from index" + weatherData);
