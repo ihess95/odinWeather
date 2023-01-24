@@ -12,6 +12,15 @@ async function getWeather(location, unit, apiKey) {
     console.log(`Feels Like: ${weatherData.main.feels_like}`);
     console.log(`Humidity: ${weatherData.main.humidity}`);
     console.log(`Wind: ${weatherData.wind.speed} MPH`);
+    const weatherInfo = {
+      type: weatherData.weather[0].main,
+      temp: weatherData.main.temp,
+      feelsLike: weatherData.main.feels_like,
+    };
+
+    const weatherDiv = document.createElement("div");
+    weatherDiv.classList.add("weatherDiv");
+    weatherDiv.textContent = JSON.parse(weatherData);
   } catch {
     console.log("error");
   }
