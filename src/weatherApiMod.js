@@ -22,15 +22,10 @@ async function getWeather(location, unit, apiKey) {
     const rootDiv = document.querySelector(".mainBody");
     rootDiv.textContent = "test";
 
-    const weatherDiv = document.createElement("div");
-    weatherDiv.classList.add("weatherDiv");
-
-    const typeDiv = document.createElement("div");
     typeDiv.classList.add("typeDiv");
     typeDiv.textContent = weatherInfo.type;
     weatherDiv.classList.add("weatherDiv");
 
-    const tempDiv = document.createElement("div");
     tempDiv.classList.add("tempDiv");
     tempDiv.textContent = weatherInfo.temp;
 
