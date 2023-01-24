@@ -11,6 +11,7 @@ async function getWeather(location, unit, apiKey) {
     );
     console.log(response);
     weatherData = await response.json();
+    const weatherTest = weatherData;
     console.log(weatherData.name);
     console.log(`weatherData: ${weatherData.weather[0].main}`);
     console.log(`Temp: ${weatherData.main.temp}`);
@@ -23,3 +24,10 @@ async function getWeather(location, unit, apiKey) {
 }
 
 getWeather("London", "Imperial", apiKey);
+
+const mainDiv = document.querySelector(".mainBody");
+const weatherOutput = document.createElement("div");
+weatherOutput.className = "weatherOutput";
+weatherOutput.textContent = weatherTest;
+
+mainDiv.appendChild(weatherOutput);
