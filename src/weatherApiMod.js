@@ -16,11 +16,37 @@ async function getWeather(location, unit, apiKey) {
       type: weatherData.weather[0].main,
       temp: weatherData.main.temp,
       feelsLike: weatherData.main.feels_like,
+      humidity: weatherData.main.humidity,
     };
+
+    const rootDiv = document.querySelector(".mainBody");
+    rootDiv.textContent = "test";
 
     const weatherDiv = document.createElement("div");
     weatherDiv.classList.add("weatherDiv");
-    weatherDiv.textContent = JSON.parse(weatherInfo);
+
+    const typeDiv = document.createElement("div");
+    typeDiv.classList.add("typeDiv");
+    typeDiv.textContent = weatherInfo.type;
+    weatherDiv.classList.add("weatherDiv");
+
+    const tempDiv = document.createElement("div");
+    tempDiv.classList.add("tempDiv");
+    tempDiv.textContent = weatherInfo.temp;
+
+    const feelsDiv = document.createElement("div");
+    feelsDiv.classList.add("feelsDiv");
+    feelsDiv.textContent = weatherInfo.feelsLike;
+
+    const humidityDiv = document.createElement("div");
+    humidityDiv.classList.add("humidityDiv");
+    humidityDiv.textContent = weatherInfo.humidity;
+
+    weatherDiv.appendChild(typeDiv);
+    weatherDiv.appendChild(feelsDiv);
+    weatherDiv.appendChild(humidityDiv);
+
+    rootDiv.appendChild(weatherDiv);
   } catch {
     console.log("error");
   }
