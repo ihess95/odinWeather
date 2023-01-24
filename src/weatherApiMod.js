@@ -22,20 +22,24 @@ async function getWeather(location, unit, apiKey) {
     const rootDiv = document.querySelector(".mainBody");
     rootDiv.textContent = "test";
 
-    typeDiv.classList.add("typeDiv");
-    typeDiv.textContent = weatherInfo.type;
+    const weatherDiv = document.createElement("div");
     weatherDiv.classList.add("weatherDiv");
 
+    const typeDiv = document.createElement("div");
+    typeDiv.classList.add("typeDiv");
+    typeDiv.textContent = `Weather Type: ${weatherInfo.type}`;
+
+    const tempDiv = document.createElement("div");
     tempDiv.classList.add("tempDiv");
-    tempDiv.textContent = weatherInfo.temp;
+    tempDiv.textContent = `Temperature: ${weatherInfo.temp}`;
 
     const feelsDiv = document.createElement("div");
     feelsDiv.classList.add("feelsDiv");
-    feelsDiv.textContent = weatherInfo.feelsLike;
+    feelsDiv.textContent = `Feels Like: ${weatherInfo.feelsLike}`;
 
     const humidityDiv = document.createElement("div");
     humidityDiv.classList.add("humidityDiv");
-    humidityDiv.textContent = weatherInfo.humidity;
+    humidityDiv.textContent = `Humidity: ${weatherInfo.humidity}`;
 
     weatherDiv.appendChild(typeDiv);
     weatherDiv.appendChild(feelsDiv);
