@@ -20,7 +20,7 @@ async function getWeather(location, unit, apiKey) {
 
     const weatherDiv = document.createElement("div");
     weatherDiv.classList.add("weatherDiv");
-    weatherDiv.textContent = JSON.parse(weatherData);
+    weatherDiv.textContent = JSON.parse(weatherInfo);
   } catch {
     console.log("error");
   }
