@@ -13,16 +13,19 @@ const headerH1 = document.createElement("h1");
 headerDiv.appendChild(headerH1);
 headerH1.textContent = "Weather App";
 
+const searchDiv = document.createElement("div");
+headerDiv.appendChild(searchDiv);
+
 const searchLabel = document.createElement("p");
 searchLabel.textContent = "Enter your city: ";
-headerDiv.appendChild(searchLabel);
+searchDiv.appendChild(searchLabel);
 
 const search = document.createElement("textarea");
 search.placeholder = "Example: London";
-headerDiv.appendChild(search);
+searchDiv.appendChild(search);
 
 const searchBtn = document.createElement("button");
 searchBtn.textContent = "Get the Weather!";
-headerDiv.appendChild(searchBtn);
+searchDiv.appendChild(searchBtn);
 
 mainDiv.appendChild(headerDiv);
