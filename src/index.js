@@ -64,9 +64,12 @@ function searchFunc(keyword) {
     unitType = "Metric";
   }
   if (keyword) {
-    weatherDiv.remove();
-    console.log(keyword);
-    getWeather(keyword, unitType, apiKey);
+    if (weatherDiv) {
+      weatherDiv.remove();
+    } else {
+      console.log(keyword);
+      getWeather(keyword, unitType, apiKey);
+    }
   } else {
     search.placeholder = "Please enter a valid City";
     alert("Please Enter a valid City.");

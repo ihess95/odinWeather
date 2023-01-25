@@ -10,4 +10,20 @@
   height: 4.5vh;
   align-items: center;
   justify-content: center;
+}
+
+.Clear {
+  background-color: skyblue;
+}
+
+.Clouds {
+  background-color: gray;
+}
+
+.Snow {
+  background-color: lightgray;
+}
+
+.Rain {
+  background-color: lightblue;
 }/*# sourceMappingURL=style.css.map */

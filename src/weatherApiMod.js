@@ -40,6 +40,8 @@ async function getWeather(location, unit, apiKey) {
     humidityDiv.classList.add("humidityDiv");
     humidityDiv.textContent = `Humidity: ${weatherInfo.humidity}`;
 
+    weatherDiv.classList.add(weatherInfo.type);
+
     weatherDiv.appendChild(typeDiv);
     weatherDiv.appendChild(tempDiv);
     weatherDiv.appendChild(feelsDiv);
@@ -48,6 +50,7 @@ async function getWeather(location, unit, apiKey) {
     rootDiv.appendChild(weatherDiv);
   } catch {
     console.log("error");
+    alert("That didn't work, please try again.");
   }
 }
 export { getWeather };
