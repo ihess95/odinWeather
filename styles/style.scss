@@ -1,4 +1,12 @@
+.headerDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .searchDiv {
   display: flex;
   background-color: blue;
+  height: 4.5vh;
+  align-items: center;
+  justify-content: center;
 }
