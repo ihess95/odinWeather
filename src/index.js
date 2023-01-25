@@ -35,6 +35,8 @@ searchBtn.addEventListener("click", function () {
 searchDiv.appendChild(searchBtn);
 
 function searchFunc(keyword) {
+  const weatherDiv = document.querySelector(".weatherDiv");
+  weatherDiv.remove();
   console.log(keyword);
   getWeather(keyword, "Imperial", apiKey);
 }
