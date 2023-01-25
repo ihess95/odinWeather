@@ -1,8 +1,9 @@
 import { getWeather } from "./weatherApiMod";
 
 const apiKey = "5ac36be232f53df626408888c0e28c2e";
+let location = "London";
 
-getWeather("London", "Imperial", apiKey);
+getWeather(location, "Imperial", apiKey);
 
 const mainDiv = document.querySelector(".mainBody");
 
@@ -27,6 +28,15 @@ searchDiv.appendChild(search);
 
 const searchBtn = document.createElement("button");
 searchBtn.textContent = "Get the Weather!";
+searchBtn.addEventListener("click", function () {
+  console.log(search.value);
+  searchFunc(search.value);
+});
 searchDiv.appendChild(searchBtn);
+
+function searchFunc(keyword) {
+  console.log(keyword);
+  getWeather(keyword, "Imperial", apiKey);
+}
 
 mainDiv.appendChild(headerDiv);
