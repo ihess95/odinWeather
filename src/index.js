@@ -26,6 +26,25 @@ const search = document.createElement("textarea");
 search.placeholder = "Example: London";
 searchDiv.appendChild(search);
 
+const fLabel = document.createElement("p");
+fLabel.textContent = "Fahrenheit";
+searchDiv.appendChild(fLabel);
+const fah = document.createElement("input");
+fah.type = "radio";
+fah.setAttribute("name", "unit");
+fah.setAttribute("value", "F");
+fah.setAttribute("checked", "true");
+searchDiv.appendChild(fah);
+
+const cLabel = document.createElement("p");
+cLabel.textContent = "Celcius";
+searchDiv.appendChild(cLabel);
+const cel = document.createElement("input");
+cel.type = "radio";
+cel.setAttribute("name", "unit");
+cel.setAttribute("value", "C");
+searchDiv.appendChild(cel);
+
 const searchBtn = document.createElement("button");
 searchBtn.textContent = "Get the Weather!";
 searchBtn.addEventListener("click", function () {
@@ -36,9 +55,17 @@ searchDiv.appendChild(searchBtn);
 
 function searchFunc(keyword) {
   const weatherDiv = document.querySelector(".weatherDiv");
+  let unitType = "";
+  if (fah.checked) {
+    console.log("fah");
+    unitType = "Imperial";
+  } else {
+    console.log("cel");
+    unitType = "Metric";
+  }
   weatherDiv.remove();
   console.log(keyword);
-  getWeather(keyword, "Imperial", apiKey);
+  getWeather(keyword, unitType, apiKey);
 }
 
 mainDiv.appendChild(headerDiv);
