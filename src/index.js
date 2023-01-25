@@ -14,6 +14,7 @@ headerDiv.appendChild(headerH1);
 headerH1.textContent = "Weather App";
 
 const searchDiv = document.createElement("div");
+searchDiv.classList.add("searchDiv");
 headerDiv.appendChild(searchDiv);
 
 const searchLabel = document.createElement("p");
