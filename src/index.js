@@ -63,9 +63,14 @@ function searchFunc(keyword) {
     console.log("cel");
     unitType = "Metric";
   }
-  weatherDiv.remove();
-  console.log(keyword);
-  getWeather(keyword, unitType, apiKey);
+  if (keyword) {
+    weatherDiv.remove();
+    console.log(keyword);
+    getWeather(keyword, unitType, apiKey);
+  } else {
+    search.placeholder = "Please enter a valid City";
+    alert("Please Enter a valid City.");
+  }
 }
 
 mainDiv.appendChild(headerDiv);
