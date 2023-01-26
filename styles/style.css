@@ -13,6 +13,9 @@
   justify-content: space-between;
   align-items: center;
 }
+.headerDiv h1 {
+  font-family: "Josefin Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 .headerDiv .unitDiv {
   display: flex;
   padding: 10px;
