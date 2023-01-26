@@ -6,9 +6,26 @@
   margin: 0px;
 }
 .headerDiv {
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  .unitDiv {
+    display: flex;
+    padding: 10px;
+    padding-right: 15px;
+    > * {
+      padding: 7px;
+    }
+  }
+  button {
+    border-style: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    color: antiquewhite;
+  }
 }
 .searchDiv {
   display: flex;
