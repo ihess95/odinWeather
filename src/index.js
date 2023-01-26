@@ -56,24 +56,32 @@ searchDiv.appendChild(searchBtn);
 function searchFunc(keyword) {
   const weatherDiv = document.querySelector(".weatherDiv");
   let unitType = "";
-  if (fah.checked) {
-    console.log("fah");
-    unitType = "Imperial";
+  if (
+    mainDiv.classList.contains("Clear", "Snow", "Drizzle", "Rain", "Clouds")
+  ) {
+    console.log("weather contained");
+    mainDiv.classList.remove(...mainDiv.classList);
+    mainDiv.classList.add("mainBody");
   } else {
-    console.log("cel");
-    unitType = "Metric";
-  }
-  if (keyword) {
-    if (weatherDiv) {
-      weatherDiv.remove();
+    if (fah.checked) {
+      console.log("fah");
+      unitType = "Imperial";
     } else {
-      console.log(keyword);
-      getWeather(keyword, unitType, apiKey);
+      console.log("cel");
+      unitType = "Metric";
     }
-  } else {
-    search.placeholder = "Please enter a valid City";
-    alert("Please Enter a valid City.");
+    if (keyword) {
+      if (weatherDiv) {
+        weatherDiv.remove();
+        getWeather(keyword, unitType, apiKey);
+      } else {
+        console.log(keyword);
+        getWeather(keyword, unitType, apiKey);
+      }
+    } else {
+      search.placeholder = "Please enter a valid City";
+      alert("Please Enter a valid City.");
+    }
   }
 }
-
 mainDiv.appendChild(headerDiv);

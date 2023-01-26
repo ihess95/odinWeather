@@ -6,10 +6,13 @@
 
 .searchDiv {
   display: flex;
-  background-color: blue;
   height: 4.5vh;
   align-items: center;
   justify-content: center;
+}
+
+.weatherDiv {
+  height: 100vh;
 }
 
 .Clear {
@@ -25,5 +28,11 @@
 }
 
 .Rain {
-  background-color: lightblue;
+  background-image: url(../img/rain.jpg);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.Mist {
+  background-color: antiquewhite;
 }/*# sourceMappingURL=style.css.map */
