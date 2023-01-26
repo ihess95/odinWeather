@@ -5,6 +5,7 @@
 * {
   padding: 0px;
   margin: 0px;
+  font-family: "roboto", sans-serif;
 }
 
 .headerDiv {
@@ -31,6 +32,7 @@
   border-radius: 10px;
   background-color: #1a1a1a;
   color: antiquewhite;
+  font-weight: bold;
 }
 
 .searchDiv {
@@ -41,9 +43,19 @@
 }
 
 .weatherDiv {
+  background-color: rgba(122, 120, 120, 0.5);
+  color: white;
+  padding: 70px;
+  border-radius: 70px;
   position: absolute;
-  left: 45%;
-  top: 50%;
+  left: 35%;
+  top: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.weatherDiv > * {
+  padding: 10px;
 }
 
 textarea {
@@ -55,30 +67,42 @@ textarea {
   margin: 1vh;
   padding-top: 7px;
   border-radius: 10px;
-  border-style: none;
+  border-style: solid;
+  border-width: 2px;
 }
 
 .Clear {
   background-image: url(../img/clear.jpg);
   background-size: 200vh;
+  background-repeat: no-repeat;
 }
 
 .Clouds {
   background-image: url(../img/clouds.jpg);
   background-size: 200vh;
+  background-repeat: no-repeat;
 }
 
 .Snow {
   background-image: url(../img/snow.jpg);
   background-size: 200vh;
+  background-repeat: no-repeat;
 }
 
 .Rain {
   background-image: url(../img/rain.jpg);
   background-size: 200vh;
+  background-repeat: no-repeat;
 }
 
 .Mist {
   background-image: url(../img/mist.jpg);
   background-size: 200vh;
+  background-repeat: no-repeat;
+}
+
+.Haze {
+  background-image: url(../img/haze.jpg);
+  background-size: 200vh;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */
