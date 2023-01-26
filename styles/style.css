@@ -1,5 +1,8 @@
 .mainBody {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 * {
@@ -43,11 +46,9 @@
 }
 
 .weatherDiv {
+  margin-top: 30vh;
   background-color: rgba(122, 120, 120, 0.5);
   color: white;
-  padding: 70px;
-  border-radius: 70px;
-  position: absolute;
   left: 35%;
   top: 35%;
   display: flex;
