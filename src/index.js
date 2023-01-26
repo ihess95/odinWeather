@@ -60,22 +60,21 @@ function searchFunc(keyword) {
   const weatherDiv = document.querySelector(".weatherDiv");
   mainDiv.className = "mainBody";
   let unitType = "";
-    if (fah.checked) {
-      unitType = "Imperial";
+  if (fah.checked) {
+    unitType = "Imperial";
+  } else {
+    unitType = "Metric";
+  }
+  if (keyword) {
+    if (weatherDiv) {
+      weatherDiv.remove();
+      getWeather(keyword, unitType, apiKey);
     } else {
-      unitType = "Metric";
+      getWeather(keyword, unitType, apiKey);
     }
-    if (keyword) {
-      if (weatherDiv) {
-        weatherDiv.remove();
-        getWeather(keyword, unitType, apiKey);
-      } else {
-        getWeather(keyword, unitType, apiKey);
-      }
-    } else {
-      search.placeholder = "Please enter a valid City";
-      alert("Please Enter a valid City.");
-    }
+  } else {
+    search.placeholder = "Please enter a valid City";
+    alert("Please Enter a valid City.");
   }
 }
 mainDiv.appendChild(headerDiv);
