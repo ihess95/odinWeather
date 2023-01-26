@@ -12,6 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .headerDiv h1 {
   font-family: "Josefin Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -58,23 +59,26 @@ textarea {
 }
 
 .Clear {
-  background-color: skyblue;
+  background-image: url(../img/clear.jpg);
+  background-size: 200vh;
 }
 
 .Clouds {
-  background-color: gray;
+  background-image: url(../img/clouds.jpg);
+  background-size: 200vh;
 }
 
 .Snow {
-  background-color: lightgray;
+  background-image: url(../img/snow.jpg);
+  background-size: 200vh;
 }
 
 .Rain {
   background-image: url(../img/rain.jpg);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background-size: 200vh;
 }
 
 .Mist {
-  background-color: antiquewhite;
+  background-image: url(../img/mist.jpg);
+  background-size: 200vh;
 }/*# sourceMappingURL=style.css.map */
