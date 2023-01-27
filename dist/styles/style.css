@@ -74,56 +74,34 @@ textarea {
 }
 
 .Clear {
-  background-image: url(../img/clear.jpg);
-  background-size: 200vh;
-  background-repeat: no-repeat;
+  background: url(../img/clear.jpg) no-repeat center center fixed;
 }
 
 .Clouds {
-  background-image: url(../img/clouds.jpg);
-  background-size: 200vh;
-  background-repeat: no-repeat;
+  background: url(../img/clouds.jpg) no-repeat center center fixed;
 }
 
 .Snow {
-  background-image: url(../img/snow.jpg);
-  background-size: 200vh;
-  background-repeat: no-repeat;
+  background: url(../img/snow.jpg) no-repeat center center fixed;
 }
 
 .Rain {
-  background-image: url(../img/rain.jpg);
-  background-size: 200vh;
-  background-repeat: no-repeat;
+  background: url(../img/rain.jpg) no-repeat center center fixed;
 }
 
 .Mist {
-  background-image: url(../img/mist.jpg);
-  background-size: 200vh;
-  background-repeat: no-repeat;
+  background: url(../img/mist.jpg) no-repeat center center fixed;
 }
 
 .Haze {
-  background-image: url(../img/haze.jpg);
-  background-size: 200vh;
-  background-repeat: no-repeat;
-} /*# sourceMappingURL=style.css.map */
+  background: url(../img/haze.jpg) no-repeat center center fixed;
+}
 
 @media (max-width: 700px) {
-  .headerDiv {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
+  .mainBody .headerDiv .searchDiv .unitDiv {
+    display: none;
   }
-  h1 {
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-  .searchDiv {
-    grid-row-start: 2;
-  }
-  button {
-    grid-row-start: 3;
+  .mainBody .headerDiv .searchDiv button {
+    padding: 5px 2px 5px 2px;
   }
 }
